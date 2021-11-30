@@ -21,10 +21,12 @@
           "error",
           {
             "type": "element",
-            "prefix": "e-comm",
+            "prefix": "ngshop",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": ["off"]
       }
     },
     {
