@@ -24,7 +24,6 @@ export class CategoriesFormComponent implements OnInit, OnDestroy {
     private categoryService: CategoriesService,
     private router: Router,
     private messageService: MessageService,
-    private location: Location,
     private actRoute: ActivatedRoute
     ) { }
 
@@ -60,11 +59,7 @@ export class CategoriesFormComponent implements OnInit, OnDestroy {
     this.categoryService.updateCategory(category).pipe(takeUntil(this.endSubs$)).subscribe(() => {
      
       this.messageService.add({severity:'success', summary:'Success', detail:'category is updated successfully...'});
-      // timer(2000)
-      //   .toPromise()
-      //   .then((done) => {
-      //     this.location.back();
-      //   }) 
+      
     },
     (() => {
       this.messageService.add({severity:'error', summary:'Error', detail:'category is not updated...'});
