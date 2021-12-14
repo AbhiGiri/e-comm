@@ -1,9 +1,26 @@
-// base
+@import'~normalize.css/normalize.css';
+
+//base
 @import'./base/colors.scss';
 @import'./base/fonts.scss';
 @import'./base/mixins.scss';
+
+//primeng
+@import'~primeicons/primeicons.css';
+@import'~primeng/resources/themes/saga-blue/theme.css';
+@import'~primeng/resources/primeng.min.css';
+@import'~primeflex/primeflex.css';
+
 @import'./base/configuration.scss';
 
 //shared
-@import'./apps/admin/dashboard.scss';
 @import'./apps/admin/shell.scss';
+@import'./apps/admin/dashboard.scss';
+
+//libs
+@import'./apps//libs/ui/ui.scss';
+@import'./apps/libs/users/users.scss';
+
+.color-red {
+    color: red;
+}

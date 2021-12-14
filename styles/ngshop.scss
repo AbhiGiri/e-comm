@@ -1,3 +1,5 @@
+@import'~normalize.css/normalize.css';
+
 //base
 @import'./base/colors.scss';
 @import'./base/fonts.scss';
@@ -11,6 +13,9 @@
 //primeflex
 @import'~primeflex/primeflex.css';
 
+//Library
+@import'~animate.css/animate.css';
+
 //base config.
 @import'./base/configuration.scss';
 
@@ -19,11 +24,22 @@
 
 //shared
 @import'./apps/ngshop/shared/header.scss';
-@import'./apps/ngshop/shared/footer.scss';
 @import'./apps/ngshop/shared/nav.scss';
+@import'./apps/ngshop/shared/footer.scss';
 
 //libs
-@import'./apps/libs/orders/orders.scss';
-@import'./apps/libs/products/products.scss';
 @import'./apps/libs/ui/ui.scss';
+@import'./apps/libs/products/products.scss';
+@import'./apps/libs/orders/orders.scss';
 @import'./apps/libs/users/users.scss';
+
+.color-red {
+    color: red;
+}
+
+.container {
+    width: auto;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: var(--surface-200);
+}

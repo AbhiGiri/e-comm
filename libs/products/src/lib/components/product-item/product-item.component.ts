@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
+import { Component, Input } from '@angular/core';
+import { Product } from '@e-comm/products';
+import { CartItem, CartService } from '@e-comm/orders';
 
 @Component({
   selector: 'products-product-item',
@@ -6,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent {
 
-  constructor() { }
+  @Input() product: Product;
 
-  ngOnInit(): void {
+  constructor(
+    private cartService: CartService
+  ) { 
   }
 
+  addProductToCart() {
+    const cartItem: CartItem = {
+      productId: this.product.id,
+      quantity: 1
+    }  
+    this.cartService.setCartItem(cartItem);
+  }
 }
